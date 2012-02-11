@@ -308,6 +308,9 @@ public class Settings extends PreferenceActivity implements DialogInterface.OnCl
         // and the UI state would be inconsistent with actual state
         mButtonDataRoam.setChecked(mPhone.getDataRoamingEnabled());
 
+        mButtonNationalDataRoam.setChecked(android.provider.Settings.System.getInt(
+             mPhone.getContext().getContentResolver(), android.provider.Settings.System.MVNO_ROAMING, 0) == 1);
+
         if (getPreferenceScreen().findPreference(BUTTON_PREFERED_NETWORK_MODE) != null)  {
             mPhone.getPreferredNetworkType(mHandler.obtainMessage(
                     MyHandler.MESSAGE_GET_PREFERRED_NETWORK_TYPE));
