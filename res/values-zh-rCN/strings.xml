@@ -713,4 +713,30 @@
     <string name="description_target_answer" msgid="7205604197797472471">"接听"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"发送短信"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"拒绝"</string>
+
+    <string name="dialer_ui_settings_title">拨号器设置</string>
+    <string name="dialer_ui_settings_summary">设定拨号器其他功能</string>
+
+    <string name="exit_to_home_screen_title">通话结束后直接返回主桌面</string>
+    <string name="exit_to_home_screen_summary">通话结束后直接返回主桌面,而不是联络纪录</string>
+
+    <string name="landscape_mode_title">启用横向模式</string>
+    <string name="landscape_mode_summary">启用横向模式(感应器可用情况)</string>
+    <string name="enable_statusbar_title">启用状态栏</string>
+    <string name="enable_statusbar_summary">允许通话界面使用状态栏</string>
+    <string name="disable_lightsout_title">关闭导航栏背灯</string>
+    <string name="disable_lightsout_summary">通话中关闭导航栏按键的背灯</string>
+
+    <string name="per_change_mobile_network">更改网络模式 (2G/3G)</string>  
+    <string name="per_change_mobile_network_desc">容许获得权限程序改变使用2G或3G数据(注意3G耗电量)</string>
+
+    <string name="advanced_setting">高级设置</string>
+    <string name="vibrate_outgoing">接听震动</string>
+    <string name="vibrate_outgoing_sum">当对方接听时震动.</string>
+    <string name="vibrate_45">45秒震动</string>
+    <string name="vibrate_45_sum">呼出通话时到45秒时震动.</string>
+    <string name="vibrate_hangup">挂断震动</string>
+    <string name="vibrate_hangup_sum">通话结束时震动.</string>
+    <string name="vibrate_call_waiting">呼叫等待震动</string>
+    <string name="vibrate_call_waiting_sum">当呼叫等待时震动通知.</string>
 </resources>

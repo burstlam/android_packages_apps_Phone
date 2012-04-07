@@ -713,4 +713,14 @@
     <string name="description_target_answer" msgid="7205604197797472471">"Odpovedať"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"Odoslať SMS"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"Odmietnuť"</string>
+
+    <string name="advanced_setting">Rozšírené Nastavenia</string>
+    <string name="vibrate_outgoing">Vibrovať pri odpovedi</string>
+    <string name="vibrate_outgoing_sum">Vibrovať keď je hovor zodvihnutý</string>
+    <string name="vibrate_45">Vibrovať každých 45 sekúnd</string>
+    <string name="vibrate_45_sum">Vibrovať každých 45 sekúnd počas odchádzajúceho hovoru</string>
+    <string name="vibrate_hangup">Vibrovať pri zložení</string>
+    <string name="vibrate_hangup_sum">Vibrovať pri ukončení hovoru</string>
+    <string name="vibrate_call_waiting">Vibrovať pri čakajúcom hovore</string>
+    <string name="vibrate_call_waiting_sum">Vibrovať pri čakajúcom hovore</string>
 </resources>
