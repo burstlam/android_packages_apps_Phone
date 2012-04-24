@@ -769,4 +769,16 @@
     <string name="national_roaming_enable">啟用數據漫遊 </string>
     <!-- Mobile network settings screen, setting summary text when check box is clear -->
     <string name="national_roaming_disable">禁用國際漫遊</string>
+
+    <!-- Ring Delay -->
+    <string name="ring_delay_title">來電鈴聲延時</string>
+    <string name="ring_delay_summary">選擇延遲播放來電鈴聲時間</string>
+
+    <!-- Ring Delay entries. -->
+    <string-array name="ring_delay_entries">
+        <item>關閉</item>
+        <item>3 秒</item>
+        <item>6 秒</item>
+        <item>9 秒</item>
+    </string-array>
 </resources>
