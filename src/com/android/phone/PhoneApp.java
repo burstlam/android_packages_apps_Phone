@@ -31,6 +31,10 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.net.Uri;
@@ -65,6 +69,8 @@ import com.android.internal.telephony.TelephonyIntents;
 import com.android.internal.telephony.cdma.TtyIntent;
 import com.android.phone.OtaUtils.CdmaOtaScreenState;
 import com.android.server.sip.SipService;
+
+import android.provider.Settings;
 
 /**
  * Top-level Application class for the Phone app.
@@ -242,6 +248,16 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
     private int mOrientation = AccelerometerListener.ORIENTATION_UNKNOWN;
 
     private UpdateLock mUpdateLock;
+
+    // Flip to mute ringers
+    private int mLastOrientation = AccelerometerListener.ORIENTATION_FLIPDOWN;
+    private boolean mRingerMuted = false;
+    private boolean mMaximizedVolume = false;
+    private boolean mRestoredVolume = false;
+    private AudioManager audioManager;
+    private int mMaxVolume;
+    private int mDesiredVolume;
+    // end
 
     // Broadcast receiver for various intent broadcasts (see onCreate())
     private final BroadcastReceiver mReceiver = new PhoneAppBroadcastReceiver();
@@ -655,6 +671,14 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
                     Phone.TTY_MODE_OFF);
             mHandler.sendMessage(mHandler.obtainMessage(EVENT_TTY_PREFERRED_MODE_CHANGED, 0));
         }
+
+        // dx: get volume for ringer
+        audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        mMaxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_RING);
+                mDesiredVolume = audioManager.getStreamVolume(AudioManager.STREAM_RING);
+                if (VDBG) Log.d(LOG_TAG, "dx: ringvol=" + mDesiredVolume + ", maxvol=" + mMaxVolume);
+        // dx end
+
         // Read HAC settings and configure audio hardware
         if (getResources().getBoolean(R.bool.hac_enabled)) {
             int hac = android.provider.Settings.System.getInt(phone.getContext().getContentResolver(),
@@ -1202,6 +1226,21 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
                        + ", showingDisc " + showingDisconnectedConnection + ")");
         // keepScreenOn == true means we'll hold a full wake lock:
         requestWakeState(keepScreenOn ? WakeState.FULL : WakeState.SLEEP);
+
+        // mod : phone is ringing?
+        if (isRinging) {
+        	// reread the volume
+			mMaxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_RING);
+			mDesiredVolume = audioManager.getStreamVolume(AudioManager.STREAM_RING);
+			if (VDBG) Log.d(LOG_TAG, "dx: ringvol=" + mDesiredVolume + ", maxvol=" + mMaxVolume);
+			
+        	// enable accelerometer to check flipdown state
+        	if (!mAccelerometerListener.isEnabled()) {
+		    	// option enabled?
+			    if (Settings.System.getInt(getContentResolver(), Settings.System.FLIPPING_DOWN_MUTES_RINGER, 1) == 1)
+			    	mAccelerometerListener.enable(true);
+                }
+        }
     }
 
     /**
@@ -1306,6 +1345,17 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
     /* package */ void updateProximitySensorMode(Phone.State state) {
         if (VDBG) Log.d(LOG_TAG, "updateProximitySensorMode: state = " + state);
 
+        // flip to mute ringer: finished the call? ringer is not muted anymore!
+        if (state == Phone.State.IDLE) {
+	        if (VDBG) Log.d(LOG_TAG, "Phone idle, no more muted.");
+			mRingerMuted = false;
+			mMaximizedVolume = false;
+			mRestoredVolume = false;
+			mLastOrientation = AccelerometerListener.ORIENTATION_FLIPDOWN;
+			if (mAccelerometerListener.isEnabled()) mAccelerometerListener.enable(false);
+        }
+        // end *flip to mute ringer*
+
         if (proximitySensorModeEnabled()) {
             synchronized (mProximityWakeLock) {
                 // turn proximity sensor off and turn screen on immediately if
@@ -1372,7 +1422,17 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
     public void orientationChanged(int orientation) {
         mOrientation = orientation;
         updateProximitySensorMode(mCM.getState());
+
+    // *flip to mute ringer* : Are we being flipped down?
+       	if (orientation == AccelerometerListener.ORIENTATION_FLIPDOWN) {
+	        if ((mLastOrientation != AccelerometerListener.ORIENTATION_FLIPDOWN) && (!mRingerMuted)) {
+				notifier.silenceRinger();
+				mRingerMuted = true;        
+			}
+        }
+        mLastOrientation = orientation;
     }
+    //end *flip to mute ringer*
 
     /**
      * Notifies the phone app when the phone state changes.
