@@ -739,4 +739,22 @@
     <string name="vibrate_hangup_sum">通话结束时震动.</string>
     <string name="vibrate_call_waiting">呼叫等待震动</string>
     <string name="vibrate_call_waiting_sum">当呼叫等待时震动通知.</string>
+
+    <string name="phone_number_label">设定本机号码</string>
+    <string name="phone_number_summary">设定此手机的号码</string>
+
+    <!-- Dialog title for the vibration settings for voicemail notifications [CHAR LIMIT=40] -->
+    <string name="voicemail_notification_vibrate_when_title" msgid="8731372580674292759">留言信箱振动提示</string>
+    <!-- Dialog title for the vibration settings for voice mail notifications [CHAR LIMIT=40]-->
+    <string name="voicemail_notification_vibarte_when_dialog_title" msgid="8995274609647451109">振动提示新的留言</string>
+
+    <!-- The vibrate notification modes for voicemail notifications -->
+    <string-array name="voicemail_notification_vibrate_when_entries">
+        <!-- Always [CHAR LIMIT=40] -->
+        <item msgid="2539376794936035639">永远振动</item>
+        <!-- Only when the phone is in Silent mode [CHAR LIMIT=40] -->
+        <item msgid="8091719131860840185">静音模式时启用</item>
+        <!-- Never [CHAR LIMIT=40] -->
+        <item msgid="4552962311897985633">永不提示</item>
+    </string-array>
 </resources>
