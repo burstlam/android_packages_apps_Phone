@@ -39,7 +39,6 @@ import android.os.AsyncResult;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.PowerManager;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.telephony.ServiceState;
@@ -253,8 +252,6 @@ public class InCallScreen extends Activity
     // current "activity lifecycle" state, we can remove these flags.
     private boolean mIsDestroyed = false;
     private boolean mIsForegroundActivity = false;
-    private boolean mIsForegroundActivityForProximity = false;
-    private PowerManager mPowerManager;
 
     // For use with Pause/Wait dialogs
     private String mPostDialStrAfterPause;
@@ -613,7 +610,6 @@ public class InCallScreen extends Activity
     	updateScreen();
  
         mIsForegroundActivity = true;
-        mIsForegroundActivityForProximity = true;
 
         final InCallUiState inCallUiState = mApp.inCallUiState;
         if (VDBG) inCallUiState.dumpState();
@@ -848,9 +844,6 @@ public class InCallScreen extends Activity
         if (DBG) log("onPause()...");
         super.onPause();
 
-        if (mPowerManager.isScreenOn()) {
-             mIsForegroundActivityForProximity = false;
-        }
         mIsForegroundActivity = false;
 
         // Force a clear of the provider overlay' frame. Since the
@@ -1079,10 +1072,6 @@ public class InCallScreen extends Activity
 
     /* package */ boolean isForegroundActivity() {
         return mIsForegroundActivity;
-    }
-
-    /* package */ boolean isForegroundActivityForProximity() {
-        return mIsForegroundActivityForProximity;
     }
 
     /* package */ void updateKeyguardPolicy(boolean dismissKeyguard) {
@@ -1316,7 +1305,6 @@ public class InCallScreen extends Activity
         }
         // Finally, create the DTMFTwelveKeyDialer instance.
         mDialer = new DTMFTwelveKeyDialer(this, mDialerView);
-        mPowerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
     }
 
     /**
