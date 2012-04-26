@@ -744,7 +744,7 @@
     <string name="phone_number_summary">设定此手机的号码</string>
 
     <!-- Dialog title for the vibration settings for voicemail notifications [CHAR LIMIT=40] -->
-    <string name="voicemail_notification_vibrate_when_title" msgid="8731372580674292759">留言信箱振动提示</string>
+    <string name="voicemail_notification_vibrate_when_title" msgid="8731372580674292759">语音信箱振动提示</string>
     <!-- Dialog title for the vibration settings for voice mail notifications [CHAR LIMIT=40]-->
     <string name="voicemail_notification_vibarte_when_dialog_title" msgid="8995274609647451109">振动提示新的留言</string>
 
