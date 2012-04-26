@@ -790,6 +790,11 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
         return mInCallScreen.isForegroundActivity();
     }
 
+    boolean isShowingCallScreenForProximity() {
+        if (mInCallScreen == null) return false;
+        return mInCallScreen.isForegroundActivityForProximity();
+    }
+
     /**
      * Dismisses the in-call UI.
      *
@@ -1261,7 +1266,9 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
                             || mIsHardKeyboardOpen);
                 // We do not keep the screen off when we are horizontal, but we do not force it
                 // on when we become horizontal until the proximity sensor goes negative.
-                boolean horizontal = (mOrientation == AccelerometerListener.ORIENTATION_HORIZONTAL);
+                boolean horizontal = 
+                                (mOrientation == AccelerometerListener.ORIENTATION_HORIZONTAL);
+                screenOnImmediately |= !isShowingCallScreenForProximity() && horizontal;
 
                 if (((state == Phone.State.OFFHOOK) || mBeginningCall) &&
                         !screenOnImmediately && !horizontal) {
