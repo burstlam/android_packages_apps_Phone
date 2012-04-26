@@ -757,4 +757,11 @@
         <!-- Never [CHAR LIMIT=40] -->
         <item msgid="4552962311897985633">永不提示</item>
     </string-array>
+
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">国际数据漫游</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">启用数据漫游 </string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">禁用国际漫游</string>
 </resources>
