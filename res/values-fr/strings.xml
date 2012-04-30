@@ -713,14 +713,4 @@
     <string name="description_target_answer" msgid="7205604197797472471">"Réponse"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"Envoyer un SMS"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"Refuser"</string>
-
-    <string name="advanced_setting">Paramètres avancés</string>
-    <string name="vibrate_outgoing">Vibrer sur réponse</string>
-    <string name="vibrate_outgoing_sum">Vibration quand la communication est établie</string>
-    <string name="vibrate_45">Vibrer régulièrement</string>
-    <string name="vibrate_45_sum">Vibration toutes les 45 secondes pendant un appel sortant</string>
-    <string name="vibrate_hangup">Vibrer en fin d\'appel</string>
-    <string name="vibrate_hangup_sum">Vibration lorsque l\' appel est terminé</string>
-    <string name="vibrate_call_waiting">Vibrer sur double appel</string>
-    <string name="vibrate_call_waiting_sum">Vibrer lorsqu\'un appel est en attente</string>
 </resources>

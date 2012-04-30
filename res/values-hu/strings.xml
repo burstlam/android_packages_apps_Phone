@@ -713,14 +713,4 @@
     <string name="description_target_answer" msgid="7205604197797472471">"Fogadás"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"SMS küldése"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"Elutasítás"</string>
-
-    <string name="advanced_setting">Speciális beállítások</string>
-    <string name="vibrate_outgoing">Rezgés válaszkor</string>
-    <string name="vibrate_outgoing_sum">Rezgéssel jelzi a telefonhívás létrejöttét</string>
-    <string name="vibrate_45">45 mp-ként rezeg</string>
-    <string name="vibrate_45_sum">Minden 45. másodpercben rezeg a kimenő hívások során</string>
-    <string name="vibrate_hangup">Bontáskor rezeg</string>
-    <string name="vibrate_hangup_sum">Rezgéssel jelzi a hívás befejeztét</string>
-    <string name="vibrate_call_waiting">Hívásvárakoztatáskor rezeg</string>
-    <string name="vibrate_call_waiting_sum">Hívásvárakoztatáskor rezeg a telefon</string>
 </resources>
