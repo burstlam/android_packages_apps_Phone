@@ -735,6 +735,16 @@
     <string name="per_change_mobile_network">更改網絡模式 (2G/3G)</string>  
     <string name="per_change_mobile_network_desc">容許獲得權限程序改變使用2G或3G數據(注意3G耗電量)</string>
 
+    <string name="advanced_setting">進階設定</string>
+    <string name="vibrate_outgoing">接聽震動</string>
+    <string name="vibrate_outgoing_sum">當對方接聽時震動</string>
+    <string name="vibrate_45">45秒震動</string>
+    <string name="vibrate_45_sum">撥出通話後到45秒時震動</string>
+    <string name="vibrate_hangup">掛斷震動</string>
+    <string name="vibrate_hangup_sum">通話結束時震動</string>
+    <string name="vibrate_call_waiting">來電待接震動</string>
+    <string name="vibrate_call_waiting_sum">當有來電待接時震動通知</string>
+
     <string name="phone_number_label">設定本機號碼</string>
     <string name="phone_number_summary">設定此手機的號碼</string>
 

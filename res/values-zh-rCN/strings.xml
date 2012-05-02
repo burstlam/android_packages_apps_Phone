@@ -730,6 +730,16 @@
     <string name="per_change_mobile_network">更改网络模式 (2G/3G)</string>  
     <string name="per_change_mobile_network_desc">容许获得权限程序改变使用2G或3G数据(注意3G耗电量)</string>
 
+    <string name="advanced_setting">高级设置</string>
+    <string name="vibrate_outgoing">接听震动</string>
+    <string name="vibrate_outgoing_sum">当对方接听时震动.</string>
+    <string name="vibrate_45">45秒震动</string>
+    <string name="vibrate_45_sum">呼出通话时到45秒时震动.</string>
+    <string name="vibrate_hangup">挂断震动</string>
+    <string name="vibrate_hangup_sum">通话结束时震动.</string>
+    <string name="vibrate_call_waiting">呼叫等待震动</string>
+    <string name="vibrate_call_waiting_sum">当呼叫等待时震动通知.</string>
+
     <string name="phone_number_label">设定本机号码</string>
     <string name="phone_number_summary">设定此手机的号码</string>
 

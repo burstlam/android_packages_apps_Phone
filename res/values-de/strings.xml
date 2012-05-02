@@ -717,4 +717,14 @@
     <string name="description_target_answer" msgid="7205604197797472471">"Antworten"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"SMS senden"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"Ablehnen"</string>
+
+    <string name="advanced_setting">Erweiterte Einstellungen</string>
+    <string name="vibrate_outgoing">Vibriere bei Annahme</string>
+    <string name="vibrate_outgoing_sum">Vibriere, wenn Anruf angenommen wurde</string>
+    <string name="vibrate_45">Vibriere alle 45 Sekunden</string>
+    <string name="vibrate_45_sum">Vibriere alle 45 Sekunden während ausgehender Anrufe</string>
+    <string name="vibrate_hangup">Vibriere bei Auflegen</string>
+    <string name="vibrate_hangup_sum">Vibriere, wenn Anruf beendet wurde</string>
+    <string name="vibrate_call_waiting">Vibriere bei Anklopfen</string>
+    <string name="vibrate_call_waiting_sum">Vibriere bei Anklopfen</string>
 </resources>
