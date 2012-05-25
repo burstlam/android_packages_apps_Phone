@@ -398,6 +398,14 @@
     <string name="tty_mode_option_summary" msgid="1073835131534808732">"设置 TTY 模式"</string>
     <string name="auto_retry_mode_title" msgid="1478311108889330757">"自动重拨"</string>
     <string name="auto_retry_mode_summary" msgid="4921028586041909574">"启用自动重拨模式"</string>
+    <string name="landscape_mode_title">启用旋转</string>
+    <string name="landscape_mode_summary">允许通话界面旋转（如果传感器启用）</string>
+    <string name="enable_statusbar_title">启用状态栏</string>
+    <string name="enable_statusbar_summary">允许在通话界面下拉状态栏</string>
+    <string name="disable_lightsout_title">禁用虚拟键图标隐藏</string>
+    <string name="disable_lightsout_summary">禁止在通话界面自动隐藏虚拟键图标</string>
+    <string name="exit_to_home_screen_title">通话结束后返回主屏幕</string>
+    <string name="exit_to_home_screen_summary">通话结束后返回主屏幕而不是返回通话记录</string>
     <string name="menu_add" msgid="1882023737425114762">"添加联系人"</string>
     <string name="menu_edit" msgid="7143003705504672374">"编辑联系人"</string>
     <string name="menu_delete" msgid="3977150783449642851">"删除联系人"</string>
@@ -587,6 +595,8 @@
     <string name="voicemail_settings_for" msgid="9018656268027893088">"<xliff:g id="PROVIDER_NAME">%s</xliff:g>的设置"</string>
     <string name="other_settings" msgid="3672912580359716394">"其他通话设置"</string>
     <string name="dial_button_label" msgid="5551611636419190229">"拨打"</string>
+    <string name="dialer_ui_settings_title">拨号器设置</string>
+    <string name="dialer_ui_settings_summary">是否开启传感器，是否开启T9搜索</string>
     <string name="calling_via_template" msgid="7374498518104190489">"通过 ^1"\n<b>"^2"</b>" 呼叫"</string>
     <string name="slide_to_answer" msgid="255903188611244476">"向右拖动以接听"</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"向左拖动以使振铃器静音"</string>
@@ -714,35 +724,6 @@
     <string name="description_target_send_sms" msgid="2098326025587950144">"发送短信"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"拒绝"</string>
 
-    <string name="dialer_ui_settings_title">拨号器设置</string>
-    <string name="dialer_ui_settings_summary">设定拨号器其他功能</string>
-
-    <string name="exit_to_home_screen_title">通话结束后直接返回主桌面</string>
-    <string name="exit_to_home_screen_summary">通话结束后直接返回主桌面,而不是联络纪录</string>
-
-    <string name="landscape_mode_title">启用横向模式</string>
-    <string name="landscape_mode_summary">启用横向模式(感应器可用情况)</string>
-    <string name="enable_statusbar_title">启用状态栏</string>
-    <string name="enable_statusbar_summary">允许通话界面使用状态栏</string>
-    <string name="disable_lightsout_title">关闭导航栏背灯</string>
-    <string name="disable_lightsout_summary">通话中关闭导航栏按键的背灯</string>
-
-    <string name="per_change_mobile_network">更改网络模式 (2G/3G)</string>  
-    <string name="per_change_mobile_network_desc">容许获得权限程序改变使用2G或3G数据(注意3G耗电量)</string>
-
-    <string name="advanced_setting">高级设置</string>
-    <string name="vibrate_outgoing">接听震动</string>
-    <string name="vibrate_outgoing_sum">当对方接听时震动.</string>
-    <string name="vibrate_45">45秒震动</string>
-    <string name="vibrate_45_sum">呼出通话时到45秒时震动.</string>
-    <string name="vibrate_hangup">挂断震动</string>
-    <string name="vibrate_hangup_sum">通话结束时震动.</string>
-    <string name="vibrate_call_waiting">呼叫等待震动</string>
-    <string name="vibrate_call_waiting_sum">当呼叫等待时震动通知.</string>
-
-    <string name="phone_number_label">设定本机号码</string>
-    <string name="phone_number_summary">设定此手机的号码</string>
-
     <!-- Dialog title for the vibration settings for voicemail notifications [CHAR LIMIT=40] -->
     <string name="voicemail_notification_vibrate_when_title" msgid="8731372580674292759">语音信箱振动提示</string>
     <!-- Dialog title for the vibration settings for voice mail notifications [CHAR LIMIT=40]-->
@@ -765,15 +746,20 @@
     <!-- Mobile network settings screen, setting summary text when check box is clear -->
     <string name="national_roaming_disable">禁用国际漫游</string>
 
-    <!-- Ring Delay -->
-    <string name="ring_delay_title">来电铃声延时</string>
-    <string name="ring_delay_summary">选择延迟播放来电铃声时间</string>
+    <string name="per_change_mobile_network">更改网络模式 (2G/3G)</string>  
+    <string name="per_change_mobile_network_desc">容许获得权限程序改变使用2G或3G数据(注意3G耗电量)</string>
 
-    <!-- Ring Delay entries. -->
-    <string-array name="ring_delay_entries">
-        <item>关闭</item>
-        <item>3 秒</item>
-        <item>6 秒</item>
-        <item>9 秒</item>
-    </string-array>
+    <string name="advanced_setting">高级设置</string>
+    <string name="vibrate_outgoing">接听震动</string>
+    <string name="vibrate_outgoing_sum">当对方接听时震动.</string>
+    <string name="vibrate_45">45秒震动</string>
+    <string name="vibrate_45_sum">呼出通话时到45秒时震动.</string>
+    <string name="vibrate_hangup">挂断震动</string>
+    <string name="vibrate_hangup_sum">通话结束时震动.</string>
+    <string name="vibrate_call_waiting">呼叫等待震动</string>
+    <string name="vibrate_call_waiting_sum">当呼叫等待时震动通知.</string>
+
+    <string name="phone_number_label">设定本机号码</string>
+    <string name="phone_number_summary">设定此手机的号码</string>
+
 </resources>
