@@ -402,6 +402,8 @@
     <string name="auto_retry_mode_summary" msgid="4921028586041909574">"启用自动重拨模式"</string>
     <string name="landscape_mode_title">启用旋转</string>
     <string name="landscape_mode_summary">允许通话界面旋转（如果传感器启用）</string>
+    <string name="enable_speaker_mode_title">扩音器开关</string>
+    <string name="enable_speaker_mode_summary">横屏时自动使用扩音器</string>
     <string name="enable_statusbar_title">启用状态栏</string>
     <string name="enable_statusbar_summary">允许在通话界面下拉状态栏</string>
     <string name="disable_lightsout_title">禁用虚拟键图标隐藏</string>

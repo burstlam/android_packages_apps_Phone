@@ -406,6 +406,8 @@
     <string name="auto_retry_mode_summary" msgid="4921028586041909574">"啟用「自動重試」模式"</string>
     <string name="landscape_mode_title">啟用橫向模式</string>
     <string name="landscape_mode_summary">啟用橫向模式（如果有啟用感應器）</string>
+    <string name="enable_speaker_mode_title">擴音器開關</string>
+    <string name="enable_speaker_mode_summary">橫屏時自動使用擴音器</string>
     <string name="enable_statusbar_title">顯示通知欄</string>
     <string name="enable_statusbar_summary">在通話時顯示通知欄</string>
     <string name="disable_lightsout_title">隱藏導航列</string>
