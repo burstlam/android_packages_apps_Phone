@@ -160,8 +160,9 @@ public class InCallScreen extends Activity
     private static final int EVENT_PAUSE_DIALOG_COMPLETE = 120;
     private static final int EVENT_HIDE_PROVIDER_OVERLAY = 121;  // Time to remove the overlay.
     private static final int REQUEST_UPDATE_SCREEN = 122;
-    private static final int PHONE_INCOMING_RING = 123;
-    private static final int PHONE_NEW_RINGING_CONNECTION = 124;
+    private static final int REQUEST_FORCE_UPDATE_SCREEN = 123;
+    private static final int PHONE_INCOMING_RING = 124;
+    private static final int PHONE_NEW_RINGING_CONNECTION = 125;
     
     private static final String BUTTON_LANDSCAPE_KEY = "button_landscape_key";
     private static final String BUTTON_STATUSBAR_KEY = "button_statusbar_key";
@@ -441,6 +442,9 @@ public class InCallScreen extends Activity
                     updateScreen();
                     break;
 
+                case REQUEST_FORCE_UPDATE_SCREEN:
+                    updateScreen(true);
+                    break;
                 case PHONE_INCOMING_RING:
                     onIncomingRing();
                     break;
@@ -2253,7 +2257,21 @@ public class InCallScreen extends Activity
 
         mWildPromptText.requestFocus();
     }
-
+     /**
+     * Updates the state of the in-call UI based on the current state of
+     * the Phone.  This call has no effect if we're not currently the
+     * foreground activity.
+     *
+     * This method is only allowed to be called from the UI thread (since it
+     * manipulates our View hierarchy).  If you need to update the screen from
+     * some other thread, or if you just want to "post a request" for the screen
+     * to be updated (rather than doing it synchronously), call
+     * requestUpdateScreen() instead.
+     */
+     final private void updateScreen()
+     {
+        updateScreen(false);
+     }
     /**
      * Updates the state of the in-call UI based on the current state of
      * the Phone.  This call has no effect if we're not currently the
@@ -2265,7 +2283,7 @@ public class InCallScreen extends Activity
      * to be updated (rather than doing it synchronously), call
      * requestUpdateScreen() instead.
      */
-    private void updateScreen() {
+    private void updateScreen(boolean force) {
         if (DBG) log("updateScreen()...");
         final InCallScreenMode inCallScreenMode = mApp.inCallUiState.inCallScreenMode;
         if (VDBG) {
@@ -2326,7 +2344,7 @@ public class InCallScreen extends Activity
         // Note we update the InCallTouchUi widget before the CallCard,
         // since the CallCard adjusts its size based on how much vertical
         // space the InCallTouchUi widget needs.
-        updateInCallTouchUi();
+        updateInCallTouchUi(force);
         mCallCard.updateState(mCM);
         updateDialpadVisibility();
         updateProviderOverlay();
@@ -4010,13 +4028,18 @@ public class InCallScreen extends Activity
         mRespondViaSmsManager = new RespondViaSmsManager();
         mRespondViaSmsManager.setInCallScreenInstance(this);
     }
-
     /**
      * Updates the state of the in-call touch UI.
      */
-    private void updateInCallTouchUi() {
+    final private void updateInCallTouchUi() {
+        updateInCallTouchUi(false);
+    }
+    /**
+     * Updates the state of the in-call touch UI.
+     */
+    private void updateInCallTouchUi(boolean force) {
         if (mInCallTouchUi != null) {
-            mInCallTouchUi.updateState(mCM);
+            mInCallTouchUi.updateState(mCM,force);
         }
     }
 
@@ -4026,7 +4049,6 @@ public class InCallScreen extends Activity
     /* package */ InCallTouchUi getInCallTouchUi() {
         return mInCallTouchUi;
     }
-
     /**
      * Posts a handler message telling the InCallScreen to refresh the
      * onscreen in-call UI.
@@ -4043,7 +4065,23 @@ public class InCallScreen extends Activity
         mHandler.removeMessages(REQUEST_UPDATE_SCREEN);
         mHandler.sendEmptyMessage(REQUEST_UPDATE_SCREEN);
     }
-
+    /**
+     * Posts a handler message telling the InCallScreen to force refresh the
+     * onscreen in-call UI.
+     *
+     * This is just a wrapper around updateScreen(true), for use by the
+     * rest of the phone app or from a thread other than the UI thread.
+     *
+     * updateScreen() is a no-op if the InCallScreen is not the foreground
+     * activity, so it's safe to call this whether or not the InCallScreen
+     * is currently visible.
+     */
+    /* package */ void requestForceUpdateScreen() {
+        if (DBG) log("requestForceUpdateScreen()...");
+        mHandler.removeMessages(REQUEST_UPDATE_SCREEN);
+	mHandler.removeMessages(REQUEST_FORCE_UPDATE_SCREEN);
+        mHandler.sendEmptyMessage(REQUEST_FORCE_UPDATE_SCREEN);
+    }
     /**
      * @return true if it's OK to display the in-call touch UI, given the
      * current state of the InCallScreen.
