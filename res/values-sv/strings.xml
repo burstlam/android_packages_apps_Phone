@@ -631,5 +631,4 @@
     <string name="preference_category_ringtone" msgid="5197960752529332721">"Ringsignal och vibrera"</string>
     <string name="perm_change_mobile_network">Byt nätverk (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">En applikation med denna tillåtelse kan, när som helst, byta mellan 2G data och 3G data. 3G är snabbare, förbrukar mer batteri och kan också kosta dig mer pengar.</string>
->>>>>>> 8db48a3... Port network mode toggle from CM10
 </resources>
