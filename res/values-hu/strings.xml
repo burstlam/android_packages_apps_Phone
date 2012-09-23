@@ -633,4 +633,12 @@
     <string name="vibrate_hangup_sum">Rezgéssel jelzi a hívás befejeztét</string>
     <string name="vibrate_call_waiting">Hívásvárakoztatáskor rezeg</string>
     <string name="vibrate_call_waiting_sum">Hívásvárakoztatáskor rezeg a telefon</string>
+
+    <string name="vibration_title">Telefon rezgés</string>
+    <string name="ring_delay_title">Csöngés késleltetés</string>
+    <string name="ring_delay_summary">Csöngés késleltetés kiválasztása</string>
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Tárcsázó beállítás</string>
+    <string name="dialer_ui_settings_summary">Tárcsázó beállításai</string>
 </resources>
