@@ -720,4 +720,13 @@
     <item msgid="1595097872875714252">"Apenas quando estiver no silencioso"</item>
     <item msgid="1458182414036878616">"Nunca"</item>
   </string-array>
+    <string name="advanced_setting">Configuração avançada</string>
+    <string name="vibrate_outgoing">Vibrar ao atender</string>
+    <string name="vibrate_outgoing_sum">Vibra quando a chamada efetuada é atendida</string>
+    <string name="vibrate_45">Vibrar a cada 45 segundos</string>
+    <string name="vibrate_45_sum">Vibrar aos 45 segundos de cada minuto durante chamada efetuada</string>
+    <string name="vibrate_hangup">Vibrar ao desligar</string>
+    <string name="vibrate_hangup_sum">Vibra quando a chamada é desligada</string>
+    <string name="vibrate_call_waiting">Vibrar c/ chamada em espera</string>
+    <string name="vibrate_call_waiting_sum">Vibra quando existem chamadas em espera</string>
 </resources>
