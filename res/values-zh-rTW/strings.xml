@@ -753,4 +753,8 @@
     <string name="vibrate_hangup_sum">通話結束時震動</string>
     <string name="vibrate_call_waiting">來電待接震動</string>
     <string name="vibrate_call_waiting_sum">當有來電待接時震動通知</string>
+
+    <string name="mvno_roaming">境內資料漫遊</string>
+    <string name="national_roaming_enable">這容許您在國境內使用其他電信業者的服務</string>
+    <string name="national_roaming_disable">要允許在與您的電信業者相同的國家內使用資料漫遊嗎？某些虛擬電信業者會用到這個設定來存取資料。如果您的電信業者會向您收取境內漫遊費用就“不要”啟用這個選項！這個設定在您重新啟動手機或開啟並關閉飛航模式後才會生效。</string>
 </resources>

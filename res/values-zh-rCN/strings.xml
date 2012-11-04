@@ -750,5 +750,9 @@
     <string name="vibrate_hangup_sum">通话结束时震动.</string>
     <string name="vibrate_call_waiting">呼叫等待震动</string>
     <string name="vibrate_call_waiting_sum">当呼叫等待时震动通知.</string>
-</resources>
 
+    <string name="mvno_roaming">国内漫游</string>
+    <string name="mvno_roaming_enable">允许你在本国内使用其它电信运营商的服务</string>
+    <string name="mvno_roaming_disable">要在和你的电信运营相同的国家内启用漫游吗？某些虚拟电信运营商需要启用这个来设置一些资料。如果你的运营商需要对此收费，请“不要”启用这个选项！这项设置只有在重启手机或者切换到飞行模式并切回来的时候才会起效。</string>
+
+</resources>
