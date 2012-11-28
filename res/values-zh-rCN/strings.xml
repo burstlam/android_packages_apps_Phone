@@ -644,4 +644,16 @@
     <string name="national_roaming_enable">当全国漫游时允许连接移动数据网络</string>
     <string name="national_roaming_disable">当全国漫游时禁止连接移动数据网络</string>
     <string name="preference_category_ringtone" msgid="5197960752529332721">"铃声和振动"</string>
+
+    <!-- Advanced Settings -->
+    <string name="advanced_setting">高级设置</string>
+    <string name="vibrate_outgoing">接听震动</string>
+    <string name="vibrate_outgoing_sum">当对方接听时震动.</string>
+    <string name="vibrate_45">45秒震动</string>
+    <string name="vibrate_45_sum">呼出通话时到45秒时震动.</string>
+    <string name="vibrate_hangup">挂断震动</string>
+    <string name="vibrate_hangup_sum">通话结束时震动.</string>
+    <string name="vibrate_call_waiting">呼叫等待震动</string>
+    <string name="vibrate_call_waiting_sum">当呼叫等待时震动通知.</string>
+    <!-- End Advanced Settings -->
 </resources>
