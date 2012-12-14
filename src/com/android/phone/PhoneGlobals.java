@@ -562,6 +562,8 @@ public class PhoneGlobals extends ContextWrapper
             intentFilter.addAction(TelephonyIntents.ACTION_SIM_STATE_CHANGED);
             intentFilter.addAction(TelephonyIntents.ACTION_RADIO_TECHNOLOGY_CHANGED);
             intentFilter.addAction(TelephonyIntents.ACTION_SERVICE_STATE_CHANGED);
+			intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
+			intentFilter.addAction(Intent.ACTION_SCREEN_ON);
             intentFilter.addAction(TelephonyIntents.ACTION_EMERGENCY_CALLBACK_MODE_CHANGED);
             if (mTtyEnabled) {
                 intentFilter.addAction(TtyIntent.TTY_PREFERRED_MODE_CHANGE_ACTION);
