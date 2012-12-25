@@ -187,6 +187,7 @@ public class Ringer {
             int ringerVolume = mAudioManager.getStreamVolume(AudioManager.STREAM_RING);
             if (ringerVolume == 0 && mRingerVolumeSetting <= 0 || inQuietHours()) {
                 if (DBG) log("skipping ring because volume is zero");
+                PhoneUtils.setAudioMode();
                 return;
             }
 
@@ -284,7 +285,6 @@ public class Ringer {
                 Message msg = mRingHandler.obtainMessage(STOP_RING);
                 msg.obj = mRingtone;
                 mRingHandler.sendMessage(msg);
-                PhoneUtils.setAudioMode();
                 mRingThread = null;
                 mRingHandler = null;
                 mRingtone = null;
@@ -293,6 +293,8 @@ public class Ringer {
             } else {
                 if (DBG) log("- stopRing: null mRingHandler!");
             }
+
+            PhoneUtils.setAudioMode();
 
             if (mVibratorThread != null) {
                 if (DBG) log("- stopRing: cleaning up vibrator thread...");
