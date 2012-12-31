@@ -1407,7 +1407,7 @@ public class CallCard extends LinearLayout
 				mLabel.setText(label + "  " +info.geoDescription);
 				mLabel.setVisibility(View.VISIBLE);	
 			}
-	    	else
+	    	else if(!TextUtils.isEmpty(info.geoDescription))
 	    	{
 			mPhoneNumber.setText(info.geoDescription);
 			mPhoneNumber.setVisibility(View.VISIBLE);	
