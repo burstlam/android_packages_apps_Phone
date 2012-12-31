@@ -1409,13 +1409,8 @@ public class CallCard extends LinearLayout
 			}
 	    	else
 	    	{
-				if(info.phoneNumber.equals(mPhoneNumber.getText()))
-					mLabel.setVisibility(View.GONE);
-				else
-				{
-					mLabel.setText(info.geoDescription);
-					mLabel.setVisibility(View.VISIBLE);	
-				}
+			mPhoneNumber.setText(info.geoDescription);
+			mPhoneNumber.setVisibility(View.VISIBLE);	
 	    	}	
     }
 
