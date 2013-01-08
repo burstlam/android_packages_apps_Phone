@@ -1391,6 +1391,24 @@ public class CallCard extends LinearLayout
         // Other text fields:
         updateCallTypeLabel(call);
         // updateSocialStatus(socialStatusText, socialStatusBadge, call);  // Currently unused
+        // display Phone Location
+        setGeoDescription(info, label);
+    }
+
+    private void setGeoDescription(CallerInfo info, String label) {
+
+        if(TextUtils.isEmpty(info.geoDescription))
+            info.updateGeoDescription(mContext, info.phoneNumber);
+            if(label != null && !TextUtils.isEmpty(info.geoDescription))
+			{
+                mLabel.setText(label + "  " +info.geoDescription);
+                mLabel.setVisibility(View.VISIBLE);
+			} 
+            else if(!TextUtils.isEmpty(info.geoDescription))
+            {
+                mPhoneNumber.setText(info.geoDescription);
+                mPhoneNumber.setVisibility(View.VISIBLE);
+            }
     }
 
     /**
