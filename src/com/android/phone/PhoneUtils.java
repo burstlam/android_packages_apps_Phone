@@ -424,11 +424,11 @@ public class PhoneUtils {
         }
         static boolean vibHangup(Context context) {
             return PreferenceManager.getDefaultSharedPreferences(context)
-                      .getBoolean("button_vibrate_hangup", false);
+                      .getBoolean("button_vibrate_hangup", true);
         }
         static boolean vibOutgoing(Context context) {
             return PreferenceManager.getDefaultSharedPreferences(context)
-                      .getBoolean("button_vibrate_outgoing", false);
+                      .getBoolean("button_vibrate_outgoing", true);
         }
         static boolean vibCallWaiting(Context context) {
             return PreferenceManager.getDefaultSharedPreferences(context)
