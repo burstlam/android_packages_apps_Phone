@@ -193,6 +193,8 @@ public class CallFeaturesSetting extends PreferenceActivity
             "sip_settings_category_key";
     private static final String BUTTON_EXIT_TO_HOMESCREEN_KEY = "button_exit_to_home_screen_key";
     private static final String BUTTON_LANDSCAPE_KEY = "button_landscape_key";
+    // Key for flip actions
+    public static final String FLIP_ACTION_KEY = "flip_action";
 
     private Intent mContactListIntent;
 
@@ -293,6 +295,9 @@ public class CallFeaturesSetting extends PreferenceActivity
 
     private CheckBoxPreference mButtonExitToHomeScreen;
 	private CheckBoxPreference mButtonLandscape;
+    //Preference for flip action
+    private ListPreference mFlipAction;
+
     private class VoiceMailProvider {
         public VoiceMailProvider(String name, Intent intent) {
             this.name = name;
@@ -620,9 +625,19 @@ public class CallFeaturesSetting extends PreferenceActivity
             mButtonRingDelay.setSummary(mButtonRingDelay.getEntry());
         } else if (preference == mButtonSipCallOptions) {
             handleSipCallOptionsChange(objValue);
+        } else if (preference == mFlipAction) {
+            updateFlipActionSummary((String) objValue);
         }
         // always let the preference setting proceed.
         return true;
+    }
+
+    private void updateFlipActionSummary(String action) {
+        int i = Integer.parseInt(action);
+        if(mFlipAction != null) {
+            String[] summaries = getResources().getStringArray(R.array.flip_action_summary_entries);
+            mFlipAction.setSummary(getString(R.string.flip_action_summary, summaries[i]));
+        }
     }
 
     @Override
@@ -1549,6 +1564,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         mButtonExitToHomeScreen = (CheckBoxPreference) findPreference(BUTTON_EXIT_TO_HOMESCREEN_KEY);
         mButtonRingDelay = (ListPreference) findPreference(BUTTON_RING_DELAY_KEY);
         mVoicemailProviders = (ListPreference) findPreference(BUTTON_VOICEMAIL_PROVIDER_KEY);
+        mFlipAction = (ListPreference) findPreference(FLIP_ACTION_KEY);
         if (mVoicemailProviders != null) {
             mVoicemailProviders.setOnPreferenceChangeListener(this);
             mVoicemailSettings = (PreferenceScreen)findPreference(BUTTON_VOICEMAIL_SETTING_KEY);
@@ -1618,6 +1634,10 @@ public class CallFeaturesSetting extends PreferenceActivity
                 prefSet.removePreference(mButtonRingDelay);
                 mButtonRingDelay = null;
             }
+        }
+
+        if(mFlipAction != null) {
+            mFlipAction.setOnPreferenceChangeListener(this);
         }
 
         if (!getResources().getBoolean(R.bool.world_phone)) {
@@ -1802,6 +1822,10 @@ public class CallFeaturesSetting extends PreferenceActivity
             if (mPrefEntry != null) {
                 mButtonRingDelay.setSummary(mPrefEntry);
             }
+        }
+
+        if (mFlipAction != null) {
+            updateFlipActionSummary(mFlipAction.getValue());
         }
 
         lookupRingtoneName();
