@@ -1532,10 +1532,6 @@ public class PhoneGlobals extends ContextWrapper
                       mAccelerometerListener.enable(mLastPhoneState == PhoneConstants.State.OFFHOOK &&
                               action.equals(Intent.ACTION_SCREEN_ON));
                   }
-            } else if (action.equals(ACTION_VIBRATE_45)) {
-                if (VDBG) Log.d(LOG_TAG, "mReceiver: ACTION_VIBRATE_45");
-                mAM.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 60000, mVibrateIntent);
-                vibrate(70, 70, -1);
             }
         }
     }
