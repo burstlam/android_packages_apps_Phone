@@ -185,6 +185,13 @@
         android:persistent="true"
         android:summary="@string/exit_to_home_screen_summary"/>
 
+     <CheckBoxPreference
+        android:key="button_calllog_after_call"
+        android:title="@string/calllog_after_call"
+        android:persistent="true"
+        android:defaultValue="true"
+        android:summary="@string/calllog_after_call_summary" />
+
     <CheckBoxPreference
         android:key="button_landscape_key"
         android:title="@string/landscape_mode_title"
