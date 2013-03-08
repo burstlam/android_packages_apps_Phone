@@ -51,7 +51,8 @@
         <CheckBoxPreference
             android:key="button_vibrate_outgoing"
             android:title="@string/vibrate_outgoing"
-            android:persistent="true" />
+            android:persistent="true"
+            android:defaultValue="true" />
         <CheckBoxPreference
             android:key="button_vibrate_call_waiting"
             android:title="@string/vibrate_call_waiting"
@@ -59,7 +60,8 @@
         <CheckBoxPreference
             android:key="button_vibrate_hangup"
             android:title="@string/vibrate_hangup"
-            android:persistent="true" />
+            android:persistent="true"
+            android:defaultValue="true" />
         <CheckBoxPreference
             android:key="button_vibrate_45"
             android:title="@string/vibrate_45"
