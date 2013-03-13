@@ -1367,13 +1367,16 @@
     <string name="not_voice_capable">Voice calling not supported</string>
 
     <!-- Canned response for the "Respond via SMS" feature for incoming calls. [CHAR LIMIT=35] -->
-    <string name="respond_via_sms_canned_response_1">Can\'t talk now. What\'s up?</string>
-    <!-- Canned response for the "Respond via SMS" feature for incoming calls. [CHAR LIMIT=35] -->
-    <string name="respond_via_sms_canned_response_2">I\'ll call you right back.</string>
-    <!-- Canned response for the "Respond via SMS" feature for incoming calls. [CHAR LIMIT=35] -->
-    <string name="respond_via_sms_canned_response_3">I\'ll call you later.</string>
-    <!-- Canned response for the "Respond via SMS" feature for incoming calls. [CHAR LIMIT=35] -->
-    <string name="respond_via_sms_canned_response_4">Can\'t talk now. Call me later?</string>
+    <string name="respond_via_sms_canned_response_1">I am in a meeting. I will call you when I leave.</string>
+    <string name="respond_via_sms_canned_response_2">I\'ll call you in a bit.</string>
+    <string name="respond_via_sms_canned_response_3">Sorry, I am busy.</string>
+    <string name="respond_via_sms_canned_response_4">I\'m in class. Please text me.</string>
+    <string name="respond_via_sms_canned_response_5">Sorry, I can\'t pick it up now.</string>
+    <string name="respond_via_sms_canned_response_6">Call me later, please.</string>
+    <string name="respond_via_sms_canned_response_7">I\'m driving. Please call me later.</string>
+    <string name="respond_via_sms_canned_response_8">I\'m in another call. I will call you when I am free.</string>
+    <string name="respond_via_sms_canned_response_9">I can\'t talk now. If it is urgent, please text me.</string>
+    <string name="respond_via_sms_canned_response_10">Please call me in 15 minutes.</string>
     <!-- "Respond via SMS" option that lets you compose a custom response. [CHAR LIMIT=30] -->
     <string name="respond_via_sms_custom_message">Custom message</string>
 

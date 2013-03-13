@@ -86,11 +86,17 @@ public class RespondViaSmsManager {
     // Since (for now at least) the number of messages is fixed at 4, and since
     // SharedPreferences can't deal with arrays anyway, just store the messages
     // as 4 separate strings.
-    private static final int NUM_CANNED_RESPONSES = 4;
+    private static final int NUM_CANNED_RESPONSES = 10;
     private static final String KEY_CANNED_RESPONSE_PREF_1 = "canned_response_pref_1";
     private static final String KEY_CANNED_RESPONSE_PREF_2 = "canned_response_pref_2";
     private static final String KEY_CANNED_RESPONSE_PREF_3 = "canned_response_pref_3";
     private static final String KEY_CANNED_RESPONSE_PREF_4 = "canned_response_pref_4";
+    private static final String KEY_CANNED_RESPONSE_PREF_5 = "canned_response_pref_5";
+    private static final String KEY_CANNED_RESPONSE_PREF_6 = "canned_response_pref_6";
+    private static final String KEY_CANNED_RESPONSE_PREF_7 = "canned_response_pref_7";
+    private static final String KEY_CANNED_RESPONSE_PREF_8 = "canned_response_pref_8";
+    private static final String KEY_CANNED_RESPONSE_PREF_9 = "canned_response_pref_9";
+    private static final String KEY_CANNED_RESPONSE_PREF_10 = "canned_response_pref_10";
 
     private static final String ACTION_SENDTO_NO_CONFIRMATION =
             "com.android.mms.intent.action.SENDTO_NO_CONFIRMATION";
@@ -380,12 +386,12 @@ public class RespondViaSmsManager {
 
             getPreferenceManager().setSharedPreferencesName(SHARED_PREFERENCES_NAME);
 
-            // This preference screen is ultra-simple; it's just 4 plain
-            // <EditTextPreference>s, one for each of the 4 "canned responses".
+            // This preference screen is ultra-simple; it's just 10 plain
+            // <EditTextPreference>s, one for each of the 10 "canned responses".
             //
             // The only nontrivial thing we do here is copy the text value of
             // each of those EditTextPreferences and use it as the preference's
-            // "title" as well, so that the user will immediately see all 4
+            // "title" as well, so that the user will immediately see all 10
             // strings when they arrive here.
             //
             // Also, listen for change events (since we'll need to update the
@@ -407,6 +413,30 @@ public class RespondViaSmsManager {
             pref.setOnPreferenceChangeListener(this);
 
             pref = (EditTextPreference) findPreference(KEY_CANNED_RESPONSE_PREF_4);
+            pref.setTitle(pref.getText());
+            pref.setOnPreferenceChangeListener(this);
+
+            pref = (EditTextPreference) findPreference(KEY_CANNED_RESPONSE_PREF_5);
+            pref.setTitle(pref.getText());
+            pref.setOnPreferenceChangeListener(this);
+
+            pref = (EditTextPreference) findPreference(KEY_CANNED_RESPONSE_PREF_6);
+            pref.setTitle(pref.getText());
+            pref.setOnPreferenceChangeListener(this);
+
+            pref = (EditTextPreference) findPreference(KEY_CANNED_RESPONSE_PREF_7);
+            pref.setTitle(pref.getText());
+            pref.setOnPreferenceChangeListener(this);
+
+            pref = (EditTextPreference) findPreference(KEY_CANNED_RESPONSE_PREF_8);
+            pref.setTitle(pref.getText());
+            pref.setOnPreferenceChangeListener(this);
+
+            pref = (EditTextPreference) findPreference(KEY_CANNED_RESPONSE_PREF_9);
+            pref.setTitle(pref.getText());
+            pref.setOnPreferenceChangeListener(this);
+
+            pref = (EditTextPreference) findPreference(KEY_CANNED_RESPONSE_PREF_10);
             pref.setTitle(pref.getText());
             pref.setOnPreferenceChangeListener(this);
 
@@ -477,6 +507,18 @@ public class RespondViaSmsManager {
                                        res.getString(R.string.respond_via_sms_canned_response_3));
         responses[3] = prefs.getString(KEY_CANNED_RESPONSE_PREF_4,
                                        res.getString(R.string.respond_via_sms_canned_response_4));
+        responses[4] = prefs.getString(KEY_CANNED_RESPONSE_PREF_5,
+                                       res.getString(R.string.respond_via_sms_canned_response_5));
+        responses[5] = prefs.getString(KEY_CANNED_RESPONSE_PREF_6,
+                                       res.getString(R.string.respond_via_sms_canned_response_6));
+        responses[6] = prefs.getString(KEY_CANNED_RESPONSE_PREF_7,
+                                       res.getString(R.string.respond_via_sms_canned_response_7));
+        responses[7] = prefs.getString(KEY_CANNED_RESPONSE_PREF_8,
+                                       res.getString(R.string.respond_via_sms_canned_response_8));
+        responses[8] = prefs.getString(KEY_CANNED_RESPONSE_PREF_9,
+                                       res.getString(R.string.respond_via_sms_canned_response_9));
+        responses[9] = prefs.getString(KEY_CANNED_RESPONSE_PREF_10,
+                                       res.getString(R.string.respond_via_sms_canned_response_10));
         return responses;
     }
 

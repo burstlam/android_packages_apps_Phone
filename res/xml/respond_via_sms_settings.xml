@@ -55,4 +55,34 @@
         android:defaultValue="@string/respond_via_sms_canned_response_4"
         android:dialogTitle="@string/respond_via_sms_edittext_dialog_title" />
 
+    <com.android.phone.MultiLineTitleEditTextPreference
+        android:key="canned_response_pref_5"
+        android:defaultValue="@string/respond_via_sms_canned_response_5"
+        android:dialogTitle="@string/respond_via_sms_edittext_dialog_title" />
+
+    <com.android.phone.MultiLineTitleEditTextPreference
+        android:key="canned_response_pref_6"
+        android:defaultValue="@string/respond_via_sms_canned_response_6"
+        android:dialogTitle="@string/respond_via_sms_edittext_dialog_title" />
+
+    <com.android.phone.MultiLineTitleEditTextPreference
+        android:key="canned_response_pref_7"
+        android:defaultValue="@string/respond_via_sms_canned_response_7"
+        android:dialogTitle="@string/respond_via_sms_edittext_dialog_title" />
+
+    <com.android.phone.MultiLineTitleEditTextPreference
+        android:key="canned_response_pref_8"
+        android:defaultValue="@string/respond_via_sms_canned_response_8"
+        android:dialogTitle="@string/respond_via_sms_edittext_dialog_title" />
+
+    <com.android.phone.MultiLineTitleEditTextPreference
+        android:key="canned_response_pref_9"
+        android:defaultValue="@string/respond_via_sms_canned_response_9"
+        android:dialogTitle="@string/respond_via_sms_edittext_dialog_title" />
+
+    <com.android.phone.MultiLineTitleEditTextPreference
+        android:key="canned_response_pref_10"
+        android:defaultValue="@string/respond_via_sms_canned_response_10"
+        android:dialogTitle="@string/respond_via_sms_edittext_dialog_title" />
+
 </PreferenceScreen>
