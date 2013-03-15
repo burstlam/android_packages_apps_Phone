@@ -87,7 +87,7 @@
             android:paddingRight="@dimen/call_banner_name_number_right_padding"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/incall_call_banner_text_color"
-            android:singleLine="true" />
+            android:singleLine="false" />
 
         <!-- Label (like "Mobile" or "Work", if present) and phone number, side by side -->
         <LinearLayout android:id="@+id/labelAndNumber"
@@ -95,21 +95,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="@dimen/call_banner_name_number_right_padding"
-            android:orientation="horizontal">
+            android:orientation="vertical">
             <TextView android:id="@+id/phoneNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/incall_call_banner_text_color"
+                android:textColor="#FFFFFFFF"
                 android:singleLine="true" />
             <TextView android:id="@+id/label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/incall_call_banner_text_color"
+                android:textColor="#FF33B5E5"
                 android:textAllCaps="true"
-                android:singleLine="true"
-                android:layout_marginLeft="6dp" />
+                android:singleLine="false" />
         </LinearLayout>
 
         <!-- Elapsed time indication for a call in progress. -->
