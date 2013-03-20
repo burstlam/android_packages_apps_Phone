@@ -745,4 +745,8 @@
     <string name="call_notif_callconnectedect">呼叫已通过显式呼叫转移连接</string>
 
     <!-- CYANOGENMOD ADDITIONS END -->
+
+    <!-- MOKEE ADD START -->
+    <string name="dialer_ipcall_settings_title">IP拨号</string>
+    <!-- MOKEE ADD END -->
 </resources>
