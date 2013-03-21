@@ -1610,6 +1610,11 @@
     <!-- CYANOGENMOD ADDITIONS END -->
 
     <!-- MOKEE ADD START -->
+    <!-- IP Call -->
     <string name="dialer_ipcall_settings_title">IP Call</string>
+
+    <!-- Direct Call -->
+    <string name="direct_call_title">Direct Call</string>
+    <string name="direct_call_summary">Picking up the phone calls the current phonenumber</string>
     <!-- MOKEE ADD END -->
 </resources>
