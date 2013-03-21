@@ -16,6 +16,10 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 <!-- MOKEE ADD START -->
+<!-- IP Call -->
     <string name="dialer_ipcall_settings_title">IP撥號</string>
+<!-- Direct Call -->
+    <string name="direct_call_title">體感撥號</string>
+    <string name="direct_call_summary">手機放在耳邊時將撥打目前撥號器匯入的電話號碼</string>
 <!-- MOKEE ADD END -->
 </resources>
