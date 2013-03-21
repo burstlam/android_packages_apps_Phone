@@ -185,6 +185,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     private static final String BUTTON_VIBRATION_KEY =
             "button_vibration_key";
     private static final String BUTTON_PLAY_DTMF_TONE  = "button_play_dtmf_tone";
+    private static final String BUTTON_DIRECT_CALL     = "button_direct_call";
     private static final String BUTTON_DTMF_KEY        = "button_dtmf_settings";
     private static final String BUTTON_RETRY_KEY       = "button_auto_retry_key";
     private static final String BUTTON_TTY_KEY         = "button_tty_mode_key";
@@ -299,6 +300,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     private CheckBoxPreference mVibrateWhenRinging;
     /** Whether dialpad plays DTMF tone or not. */
     private CheckBoxPreference mPlayDtmfTone;
+    private CheckBoxPreference mDirectCall;
     private CheckBoxPreference mDialpadAutocomplete;
     private CheckBoxPreference mButtonAutoRetry;
     private CheckBoxPreference mButtonHAC;
@@ -522,6 +524,9 @@ public class CallFeaturesSetting extends PreferenceActivity
         } else if (preference == mPlayDtmfTone) {
             Settings.System.putInt(getContentResolver(), Settings.System.DTMF_TONE_WHEN_DIALING,
                     mPlayDtmfTone.isChecked() ? 1 : 0);
+        } else if (preference == mDirectCall) {
+            Settings.System.putInt(getContentResolver(), Settings.System.DIALER_DIRECT_CALL,
+                    mDirectCall.isChecked() ? 1 : 0);
         } else if (preference == mMwiNotification) {
             int mwi_notification = mMwiNotification.isChecked() ? 1 : 0;
             Settings.System.putInt(mPhone.getContext().getContentResolver(),
@@ -1598,6 +1603,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         mVibrationPreference = findPreference(BUTTON_VIBRATION_KEY);
         mVibrateWhenRinging = (CheckBoxPreference) findPreference(BUTTON_VIBRATE_ON_RING);
         mPlayDtmfTone = (CheckBoxPreference) findPreference(BUTTON_PLAY_DTMF_TONE);
+        mDirectCall = (CheckBoxPreference) findPreference(BUTTON_DIRECT_CALL);
         mMwiNotification = (CheckBoxPreference) findPreference(BUTTON_MWI_NOTIFICATION_KEY);
         if (mMwiNotification != null) {
             if (getResources().getBoolean(R.bool.sprint_mwi_quirk)) {
@@ -1649,6 +1655,11 @@ public class CallFeaturesSetting extends PreferenceActivity
         if (mDialpadAutocomplete != null) {
             mDialpadAutocomplete.setChecked(Settings.Secure.getInt(contentResolver,
                     Settings.Secure.DIALPAD_AUTOCOMPLETE, 0) != 0);
+        }
+
+        if (mDirectCall != null) {
+            mDirectCall.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.DIALER_DIRECT_CALL, 0) != 0);
         }
 
         if (mButtonDTMF != null) {
