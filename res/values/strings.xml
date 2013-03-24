@@ -1639,4 +1639,8 @@
     </string-array>
 
     <!-- CYANOGENMOD ADDITIONS END -->
+
+    <!-- MOKEE ADD START -->
+    <string name="dialer_ipcall_settings_title">IP Calling</string>
+    <!-- MOKEE ADD END -->
 </resources>
