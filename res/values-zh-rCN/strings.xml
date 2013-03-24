@@ -670,6 +670,8 @@
     <string name="vibrate_hangup">通话结束时震动</string>
     <string name="vibrate_45">45 秒震动</string>
     <string name="vibrate_45_sum">呼出通话到达每分钟的 45 秒时震动</string>
+    <string name="calllog_after_call">通话结束时显示记录</string>
+    <string name="calllog_after_call_summary">通话结束后显示通话记录</string>
     <string name="show_ssn_label">事件提醒</string>
     <string name="show_ssn_summary">为通话处理相关的各种网络事件显示一个通知</string>
 
