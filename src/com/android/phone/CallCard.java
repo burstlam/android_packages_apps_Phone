@@ -24,6 +24,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.mokee.location.PhoneLocation;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
@@ -1424,24 +1425,29 @@ public class CallCard extends LinearLayout
         // Other text fields:
         updateCallTypeLabel(call);
         // updateSocialStatus(socialStatusText, socialStatusBadge, call);  // Currently unused
+
         // display Phone Location
-        setGeoDescription(info, label);
+        if(mContext.getResources().getConfiguration().locale.getCountry().equals("CN")||mContext.getResources().getConfiguration().locale.getCountry().equals("TW")) {
+	        String PhoneLocationStr=PhoneLocation.getCityFromPhone(info.phoneNumber, mContext);  		
+	        setLocationText(label, PhoneLocationStr);
+    	}
+        else
+    	{
+	        info.updateGeoDescription(mContext, info.phoneNumber);
+	        setLocationText(label, info.geoDescription);
+    	} 
     }
 
-    private void setGeoDescription(CallerInfo info, String label) {
-		
-    	if(TextUtils.isEmpty(info.geoDescription))
-    		info.updateGeoDescription(mContext, info.phoneNumber);
-	    	if(label != null && !TextUtils.isEmpty(info.geoDescription))
-			{
-				mLabel.setText(label + "  " +info.geoDescription);
-				mLabel.setVisibility(View.VISIBLE);	
-			}
-	    	else if(!TextUtils.isEmpty(info.geoDescription))
-	    	{
-			mPhoneNumber.setText(info.geoDescription);
-			mPhoneNumber.setVisibility(View.VISIBLE);	
-	    	}	
+    private void setLocationText(String label, String location) {
+        if(label != null && !TextUtils.isEmpty(location)) {
+	    	mLabel.setText(label + "  " +location);
+	    	mLabel.setVisibility(View.VISIBLE);	
+        }
+        else if(!TextUtils.isEmpty(location))
+        {
+	    	mPhoneNumber.setText(location);
+	    	mPhoneNumber.setVisibility(View.VISIBLE);	
+        }
     }
 
     /**
