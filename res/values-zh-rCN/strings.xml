@@ -744,6 +744,29 @@
     <!-- Toast text for incoming call connected through ECT -->
     <string name="call_notif_callconnectedect">呼叫已通过显式呼叫转移连接</string>
 
+    <!-- Blacklist preferences -->
+    <string name="blacklist_title">黑名单</string>
+    <string name="enable_blacklist_title">启用黑名单</string>
+    <string name="blacklist_summary_disabled">已禁用</string>
+    <string name="blacklist_summary">黑名单中的来电将被拦截</string>
+    <string name="blacklist_notify">显示通知</string>
+    <string name="blacklist_regex_title">使用通配符</string>
+    <string name="blacklist_regex_summary">使用 . 作為通配符，以 * 代表重复。例：123.* 会拦截以123开头的号码，而 .*123.* 会拦截所有包含123的号码</string>
+
+    <!-- Blacklist management -->
+    <string name="add_blacklist_number">添加电话号码</string>
+    <string name="add_to_blacklist">加入黑名单</string>
+    <string name="add_to_blacklist_message">来自 %s 的号码将被拦截</string>
+    <string name="remove_blacklist_number_title">移除电话号码</string>
+    <string name="remove_blacklist_number">你是否要从黑名单中移除 %s ?</string>
+
+    <!-- Blacklist notifications -->
+    <string name="blacklist_notification">拦截来自 %s 的电话</string>
+    <string name="unblock_number">解除</string>
+
+    <!-- Text for the onscreen "Blacklist" button -->
+    <string name="onscreenBlacklistText">黑名单</string>
+
     <!-- CYANOGENMOD ADDITIONS END -->
 
     <!-- MOKEE ADD START -->
