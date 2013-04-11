@@ -73,6 +73,15 @@
             android:summary="@string/calllog_after_call_summary"
             android:persistent="true"
             android:defaultValue="false" />
+
+        <PreferenceScreen
+            android:key="button_blacklist"
+            android:title="@string/blacklist_title"
+            android:persistent="false">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.phone"
+                android:targetClass="com.android.phone.BlacklistSetting" />
+        </PreferenceScreen>
     </PreferenceCategory>
 
   <PreferenceCategory
