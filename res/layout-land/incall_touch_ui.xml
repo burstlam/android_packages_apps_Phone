@@ -177,6 +177,13 @@
                     style="@style/InCallButton"
                     android:src="@drawable/ic_add_contact_holo_dark"
                     android:contentDescription="@string/onscreenAddCallText" />
+                <!-- "Blacklist" -->
+                <!-- The button used for toggling blackist. -->
+                <ImageButton android:id="@+id/addBlacklistButton"
+                    style="@style/InCallButton"
+                    android:src="@drawable/ic_block_contact_holo_dark"
+                    android:contentDescription="@string/onscreenBlacklistText"
+                    />
                 <!-- "Merge calls" -->
                 <!-- This button is used only on GSM devices, where we know
                      that "Add" and "Merge" are never available at the same time.
