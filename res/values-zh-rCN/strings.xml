@@ -658,6 +658,14 @@
 
     <!-- CYANOGENMOD ADDITIONS START -->
 
+    <!-- Voice quality filter -->
+    <string name="voice_quality_preferences_title">音质</string>
+    <string name="voice_quality_summary">当前设置的音频配置文件: %s</string>
+    <string name="voice_quality_entry_normal">标准</string>
+    <string name="voice_quality_entry_clear">平衡</string>
+    <string name="voice_quality_entry_crisp">明亮</string>
+    <string name="voice_quality_entry_bright">高亮</string>
+
     <!-- Noise suppression -->
     <string name="noise_suppression_title">噪音镇压</string>
     <string name="noise_suppression_summary">呼叫时启用噪音镇压</string>
