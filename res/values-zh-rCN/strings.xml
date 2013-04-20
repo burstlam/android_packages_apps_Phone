@@ -669,4 +669,6 @@
     <!-- MOKEE ADD START -->
     <string name="dialer_ipcall_settings_title">IP拨号</string>
     <!-- MOKEE ADD END -->
+
+    <string name="onscreenRecordText">通话录音</string>
 </resources>
