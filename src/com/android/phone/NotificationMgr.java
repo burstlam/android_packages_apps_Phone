@@ -545,12 +545,11 @@ public class NotificationMgr implements CallerInfoAsyncQuery.OnQueryCompleteList
 
         // keep track of the call, keeping list sorted from newest to oldest
         mMissedCalls.add(0, new MissedCallInfo(callName, number, date));
+
         Notification.Builder builder = new Notification.Builder(mContext);
         builder.setSmallIcon(android.R.drawable.stat_notify_missed_call)
                 .setTicker(mContext.getString(R.string.notification_missedCallTicker, callName))
                 .setWhen(date)
-                .setContentTitle(mContext.getText(titleResId))
-                .setContentText(expandedText)
                 .setContentIntent(PendingIntent.getActivity(mContext, 0, callLogIntent, 0))
                 .setAutoCancel(true)
                 .setDeleteIntent(createClearMissedCallsIntent());
