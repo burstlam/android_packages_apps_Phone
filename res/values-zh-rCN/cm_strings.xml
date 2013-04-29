@@ -70,6 +70,8 @@
     <string name="blacklist_notify">显示通知</string>
     <string name="blacklist_private_numbers_title">阻止私人号码</string>
     <string name="blacklist_private_numbers_summary">阻止私人号码的来电</string>
+    <string name="blacklist_unknown_numbers_title">阻止未知号码</string>
+    <string name="blacklist_unknown_numbers_summary">阻止不在联系人列表中的来电</string>
     <string name="blacklist_regex_title">使用通配符</string>
     <string name="blacklist_regex_summary">使用 . 作为通配符和 * 作为重复字符, 例如: 123.* 将会阻止所有 123 为前缀的号码; .*123.* 将会阻止所有包含 123 的号码</string>
     <string name="add_blacklist_number">添加电话号码</string>
@@ -77,8 +79,10 @@
     <string name="add_to_blacklist_message">未来来自 %s 的电话将被阻止</string>
     <string name="remove_blacklist_number_title">移除电话号码</string>
     <string name="remove_blacklist_number">您确定要从黑名单移除 %s 吗?</string>
-    <string name="blacklist_notification">阻止了 %s 的来电</string>
+    <string name="blacklist_notification">阻止了来电 %s </string>
     <string name="blacklist_notification_private_number">阻止了私人号码的来电</string>
+    <string name="blacklist_notification_unknown_number">阻止了未知来电 %s</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> 来电阻止</string>
     <string name="unblock_number">解除阻止</string>
     <string name="onscreenBlacklistText">黑名单</string>
     <string name="voice_quality_preferences_title">通话质量</string>
