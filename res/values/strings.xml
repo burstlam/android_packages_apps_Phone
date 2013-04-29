@@ -1660,7 +1660,7 @@
 
     <!-- Text for the onscreen "Blacklist" button -->
     <string name="onscreenBlacklistText">Blacklist</string>
-    <string name="onscreenRecordText">Call record</string>
+
     <!-- CYANOGENMOD ADDITIONS END -->
 
     <!-- MOKEE ADD START -->

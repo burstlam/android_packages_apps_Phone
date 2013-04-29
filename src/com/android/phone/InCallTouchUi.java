@@ -100,7 +100,6 @@ public class InCallTouchUi extends FrameLayout
     private ImageButton mSwapButton;
     private ImageButton mAddBlacklistButton;
     private View mHoldSwapSpacer;
-    private CompoundButton mRecordButton;
 
     // "Extra button row"
     private ViewStub mExtraButtonRow;
@@ -193,10 +192,6 @@ public class InCallTouchUi extends FrameLayout
         mSwapButton.setOnClickListener(this);
         mSwapButton.setOnLongClickListener(this);
         mHoldSwapSpacer = mInCallControls.findViewById(R.id.holdSwapSpacer);
-
-        mRecordButton = (CompoundButton) mInCallControls.findViewById(R.id.recordButton);
-        mRecordButton.setOnClickListener(this);
-        mRecordButton.setOnLongClickListener(this);
 
         // Blacklist functionality
         mAddBlacklistButton = (ImageButton) mInCallControls.findViewById(R.id.addBlacklistButton);
@@ -408,7 +403,6 @@ public class InCallTouchUi extends FrameLayout
             case R.id.endButton:
             case R.id.dialpadButton:
             case R.id.muteButton:
-            case R.id.recordButton:
             case R.id.holdButton:
             case R.id.swapButton:
             case R.id.cdmaMergeButton:
@@ -439,7 +433,6 @@ public class InCallTouchUi extends FrameLayout
             case R.id.mergeButton:
             case R.id.dialpadButton:
             case R.id.muteButton:
-            case R.id.recordButton:
             case R.id.holdButton:
             case R.id.swapButton:
             case R.id.audioButton: {
@@ -552,9 +545,6 @@ public class InCallTouchUi extends FrameLayout
         // "Mute"
         mMuteButton.setEnabled(inCallControlState.canMute);
         mMuteButton.setChecked(inCallControlState.muteIndicatorOn);
-
-        mRecordButton.setEnabled(inCallControlState.canRecord);
-        mRecordButton.setChecked(inCallControlState.recordIndicatorOn);
 
         // "Audio"
         updateAudioButton(inCallControlState);
@@ -691,7 +681,6 @@ public class InCallTouchUi extends FrameLayout
         log(" - dialpad: " + getButtonState(mDialpadButton));
         log(" - speaker: " + getButtonState(mAudioButton));
         log(" - mute: " + getButtonState(mMuteButton));
-        log(" - record:" + getButtonState(mRecordButton));
         log(" - hold: " + getButtonState(mHoldButton));
         log(" - swap: " + getButtonState(mSwapButton));
         log(" - add: " + getButtonState(mAddButton));
