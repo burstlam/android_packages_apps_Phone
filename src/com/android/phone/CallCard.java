@@ -1429,8 +1429,8 @@ public class CallCard extends LinearLayout
         // display Phone Location
 	if(TextUtils.isEmpty(info.phoneNumber))
 	        return;
-        if(mContext.getResources().getConfiguration().locale.getCountry().equals("CN")||mContext.getResources().getConfiguration().locale.getCountry().equals("TW")) {
-	        String PhoneLocationStr=PhoneLocation.getCityFromPhone(info.phoneNumber, mContext);  		
+        if(mContext.getResources().getConfiguration().locale.getCountry().equals("CN") || mContext.getResources().getConfiguration().locale.getCountry().equals("TW")) {
+	        String PhoneLocationStr=PhoneLocation.getCityFromPhone(info.phoneNumber);  		
 	        setLocationText(label, PhoneLocationStr);
     	}
         else
