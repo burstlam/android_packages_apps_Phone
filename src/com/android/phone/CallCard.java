@@ -25,6 +25,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.mokee.location.PhoneLocation;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
