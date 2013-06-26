@@ -1669,6 +1669,11 @@
     <!-- Text for the onscreen "Blacklist" button -->
     <string name="onscreenBlacklistText">Blacklist</string>
 
+    <!-- Hang up and dial back from IncallScreen -->
+    <string name="description_target_callback">Hang up and call back</string>
+    <string name="callback">Hang up and call back</string>
+    <string name="callback_sum">Enable call back feature directly from incomming call screen</string>
+
     <!-- CYANOGENMOD ADDITIONS END -->
 
     <!-- MOKEE ADD START -->
