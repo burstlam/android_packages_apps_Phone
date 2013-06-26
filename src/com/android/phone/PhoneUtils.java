@@ -423,10 +423,11 @@ public class PhoneUtils {
             return getPrefs(context).getBoolean("button_rejected_as_missed", false);
         }
         static boolean isBlacklistEnabled(Context context) {
-            return getPrefs(context).getBoolean("button_enable_blacklist", false);
+            return Settings.System.getInt(context.getContentResolver(),
+			Settings.System.PHONE_BLACKLIST_ENABLED, 1) != 0;
         }
         static boolean isBlacklistNotifyEnabled(Context context) {
-            return getPrefs(context).getBoolean("button_nofify", false);
+            return getPrefs(context).getBoolean("button_notify", false);
         }
         static boolean isBlacklistPrivateNumberEnabled(Context context) {
             return getPrefs(context).getBoolean("button_blacklist_private_numbers", false);
