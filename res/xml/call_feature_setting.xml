@@ -87,8 +87,8 @@
       android:title="@string/dialer_ipcall_settings_title"
       android:persistent="false">
       <intent android:action="android.intent.action.MAIN"
-          android:targetPackage="com.android.contacts"
-          android:targetClass="com.android.contacts.preference.IPCallPreferenceActivity" />
+          android:targetPackage="com.android.dialer"
+          android:targetClass="com.android.dialer.preference.IPCallPreferenceActivity" />
   </PreferenceScreen>
 
   <CheckBoxPreference
