@@ -20,7 +20,7 @@
     <string name="dialer_ipcall_settings_title">IP Call</string>
 
     <!-- Direct Call -->
-    <string name="direct_call_title">Direct Call</string>
-    <string name="direct_call_summary">Picking up the phone calls the current phonenumber</string>
+    <string name="direct_call_title">Direct call</string>
+    <string name="direct_call_summary">Lift phone to ear after entering number in dialer to call directly</string>
 
 </resources>
