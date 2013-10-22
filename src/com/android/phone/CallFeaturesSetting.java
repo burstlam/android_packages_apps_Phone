@@ -1,4 +1,7 @@
 /*
+ * Copyright (c) 2012, The Linux Foundation. All rights reserved.
+ * Not a Contribution.
+ *
  * Copyright (C) 2008 The Android Open Source Project
  * Blacklist - Copyright (C) 2013 The CyanogenMod Project
  *
@@ -1745,6 +1748,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         updateVoiceNumberField();
         mVMProviderSettingsForced = false;
         createSipCallSettings();
+        createImsSettings();
 
         mRingtoneLookupRunnable = new Runnable() {
             @Override
@@ -1841,6 +1845,12 @@ public class CallFeaturesSetting extends PreferenceActivity
                     mButtonSipCallOptions.findIndexOfValue(
                             mSipSharedPreferences.getSipCallOption()));
             mButtonSipCallOptions.setSummary(mButtonSipCallOptions.getEntry());
+        }
+    }
+
+    private void createImsSettings() {
+        if (PhoneUtils.isCallOnImsEnabled()) {
+            addPreferencesFromResource(R.xml.ims_settings_category);
         }
     }
 
