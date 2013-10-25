@@ -69,6 +69,7 @@ public class MobileNetworkSettings extends PreferenceActivity
     private static final String BUTTON_ROAMING_KEY = "button_roaming_key";
     private static final String BUTTON_CDMA_LTE_DATA_SERVICE_KEY = "cdma_lte_data_service_key";
     private static final String BUTTON_NATIONAL_ROAMING_KEY = "button_national_roaming_key";
+    private static final String BUTTON_SMSC_NUMBER_KEY = "button_smsc_number_key";
 
     static final int preferredNetworkMode = Phone.PREFERRED_NT_MODE;
 
@@ -83,6 +84,7 @@ public class MobileNetworkSettings extends PreferenceActivity
     private CheckBoxPreference mButtonDataEnabled;
     private Preference mLteDataServicePref;
     private CheckBoxPreference mButtonNationalDataRoam;
+    private Preference mSMSCNumber;
 
     private static final String iface = "rmnet0"; //TODO: this will go away
 
@@ -200,6 +202,8 @@ public class MobileNetworkSettings extends PreferenceActivity
                 android.util.Log.e(LOG_TAG, "Missing SETUP_PREPAID_DATA_SERVICE_URL");
             }
             return true;
+        } else if (preference == mSMSCNumber) {
+            return true;
         } else {
             // if the button is anything but the simple toggle preference,
             // we'll need to disable all preferences to reject all click
@@ -279,6 +283,8 @@ public class MobileNetworkSettings extends PreferenceActivity
                 throw new IllegalStateException("Unexpected phone type: " + phoneType);
             }
         }
+
+        mSMSCNumber = getPreferenceScreen().findPreference(BUTTON_SMSC_NUMBER_KEY);
 
         final boolean missingDataServiceUrl = TextUtils.isEmpty(
                 android.provider.Settings.Global.getString(getContentResolver(),

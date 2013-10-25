@@ -23,4 +23,12 @@
     <string name="direct_call_title">体感拨号</string>
     <string name="direct_call_summary">手机放在耳边时将拨打当前拨号器输入的电话号码</string>
 
+    <!-- SMSC-->
+    <string name="smsc_settings_title">信息服务中心</string>
+    <string name="smsc_settings_summary">设置和获得信息服务中心号码</string>
+    <string name="show_smscnum">显示信息服务中心号码</string>
+    <string name="smsc_number_invalid">信息服务中心号码已失效</string>
+    <string name="smsc_refresh">刷新</string>
+    <string name="smsc_update">更新</string>
+
 </resources>
