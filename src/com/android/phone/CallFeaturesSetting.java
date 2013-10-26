@@ -1606,15 +1606,8 @@ public class CallFeaturesSetting extends PreferenceActivity
         mDirectCall = (CheckBoxPreference) findPreference(BUTTON_DIRECT_CALL);
         mMwiNotification = (CheckBoxPreference) findPreference(BUTTON_MWI_NOTIFICATION_KEY);
         if (mMwiNotification != null) {
-            if (getResources().getBoolean(R.bool.sprint_mwi_quirk)) {
-                mMwiNotification.setOnPreferenceChangeListener(this);
-            } else {
-                PreferenceScreen voicemailScreen = (PreferenceScreen) findPreference(BUTTON_VOICEMAIL_CATEGORY_KEY);
-                voicemailScreen.removePreference(mMwiNotification);
-                mMwiNotification = null;
-            }
+            mMwiNotification.setOnPreferenceChangeListener(this);
         }
-
         mDialpadAutocomplete = (CheckBoxPreference) findPreference(BUTTON_DIALPAD_AUTOCOMPLETE);
         mButtonDTMF = (ListPreference) findPreference(BUTTON_DTMF_KEY);
         mButtonAutoRetry = (CheckBoxPreference) findPreference(BUTTON_RETRY_KEY);
