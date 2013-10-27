@@ -1437,6 +1437,7 @@ public class CallCard extends LinearLayout
         mPhotoTracker.setPhotoState(ContactsAsyncHelper.ImageTracker.DISPLAY_IMAGE);
 
         // The actual strings we're going to display onscreen:
+        boolean displayNameIsNumber = false;
         String displayName;
         String displayNumber = null;
         String label = null;
@@ -1507,6 +1508,7 @@ public class CallCard extends LinearLayout
 
                     // Promote the phone number up to the "name" slot:
                     displayName = number;
+                    displayNameIsNumber = true;
 
                     // ...and use the "number" slot for a geographical description
                     // string if available (but only for incoming calls.)
