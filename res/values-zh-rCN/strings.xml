@@ -647,4 +647,25 @@
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"拨号键盘触摸音效"</string>
     <string name="dial_pad_autocomplete" msgid="494525952035761075">"拨号键盘自动补全"</string>
     <string name="preference_category_ringtone" msgid="5197960752529332721">"铃声和振动"</string>
+    <string name="ContactScreen">"添加/编辑 SIM 卡联系人"</string>
+    <string name="ExportContactScreen">"导出手机联系人到 SIM 卡"</string>
+    <string name="addSimEntries">"添加 SIM 卡联系人"</string>
+    <string name="deleteAllSimEntries">"删除所有 SIM 卡联系人"</string>
+    <string name="deleteSimContacts">"正在删除 SIM卡 联系人"</string>
+    <string name="editContact">"编辑"</string>
+    <string name="sendSms">"发送短信"</string>
+    <string name="delete">"删除"</string>
+    <string name="dial">"拨号"</string>
+    <string name="enterName">"输入姓名："</string>
+    <string name="enterNumber">"输入手机号码："</string>
+    <string name="contactAddSuccess">"添加联系人到 SIM 卡成功"</string>
+    <string name="contactAddFailed">"添加联系人到 SIM 卡失败！"</string>
+    <string name="contactUpdateSuccess">"更新 SIM 卡联系人成功"</string>
+    <string name="contactUpdateFailed">"更新 SIM 卡联系人失败！"</string>
+    <string name="contactdeleteSuccess">"删除 SIM 卡联系人成功"</string>
+    <string name="contactdeleteFailed">"删除 SIM 卡联系人失败！"</string>
+    <string name="allContactdeleteSuccess">"删除所有 SIM 卡联系人成功"</string>
+    <string name="allContactdeleteFailed">"删除所有 SIM 卡联系人失败！"</string>
+    <string name="exportAllcontatsSuccess">"导出所有联系人到 SIM 卡成功"</string>
+    <string name="exportAllcontatsFailed">"导出所有联系人到 SIM 卡失败！"</string>
 </resources>
