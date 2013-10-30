@@ -34,15 +34,27 @@
 
     <!-- Advanced Settings -->
     <string name="advanced_setting">進階設定</string>
-    <string name="vibrate_outgoing">接電話時震動</string>
+    <string name="vibrate_outgoing">接通電話時震動</string>
+    <string name="vibrate_outgoing_sum">接通電話時以震動提示</string>
     <string name="vibrate_call_waiting">等待接通時震動</string>
+    <string name="vibrate_call_waiting_sum">等待接通時以震動提示</string>
     <string name="vibrate_hangup">掛斷時震動</string>
-    <string name="vibrate_45">每分鐘震動</string>
-    <string name="vibrate_45_sum">打出電話時在每分鐘的45秒時震動</string>
+    <string name="vibrate_hangup_sum">通話掛斷時以震動提示</string>
+    <string name="vibrate_60">每分鐘震動</string>
+    <string name="vibrate_60_sum">打出電話時在每分鐘的60秒時震動</string>
     <string name="calllog_after_call">通話結束察看記錄</string>
     <string name="calllog_after_call_summary">當通話結束后察看通話記錄</string>
     <string name="rejected_as_missed">拒絕來電作為未接</string>
     <string name="rejected_as_missed_sum">在通話記錄中將拒絕來電記號為 \'未接\' 而不是 \'打入\'</string>
+
+    <string name="ring_delay_title">延時播放鈴聲</string>
+    <string name="ring_delay_summary">選擇延時值</string>
+    <string name="auto_retry_mode_title">自動重撥</string>
+    <string name="auto_retry_mode_summary">啟用自動重撥功能</string>
+    <string name="exit_to_home_screen_title">通話結束時退出到主畫面</string>
+    <string name="exit_to_home_screen_summary">通話結束時退出到主畫面而不是通話記錄</string>
+    <string name="landscape_mode_title">橫向通話界面</string>
+    <string name="landscape_mode_summary">啟用橫向通話界面 (需要重力感應支援)</string>
 
     <!-- Blacklist feature -->
     <string name="blacklist_title">拒接來電</string>
