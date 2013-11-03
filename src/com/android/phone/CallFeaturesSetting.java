@@ -1647,7 +1647,7 @@ public class CallFeaturesSetting extends PreferenceActivity
 
         if (mDialpadAutocomplete != null) {
             mDialpadAutocomplete.setChecked(Settings.Secure.getInt(contentResolver,
-                    Settings.Secure.DIALPAD_AUTOCOMPLETE, 1) != 0);
+                    Settings.Secure.DIALPAD_AUTOCOMPLETE, 0) != 0);
         }
 
         if (mDirectCall != null) {
@@ -1914,7 +1914,7 @@ public class CallFeaturesSetting extends PreferenceActivity
             mVibrateWhenRinging.setChecked(getVibrateWhenRinging(this));
         }
         if (mMwiNotification != null) {
-            int mwi_notification = Settings.System.getInt(getContentResolver(), Settings.System.ENABLE_MWI_NOTIFICATION, 1);
+            int mwi_notification = Settings.System.getInt(getContentResolver(), Settings.System.ENABLE_MWI_NOTIFICATION, 0);
             mMwiNotification.setChecked(mwi_notification != 0);
 
         }
